@@ -21,6 +21,22 @@
                         } else {
                             result = "You win! " + playerSelection + " beats " + computerSelection;
                         }
+                    } else if (playerSelection == "Paper") {
+                        if (computerSelection == "Paper") {
+                            result = "You Draw";
+                        } else if (computerSelection == "Scissors") {
+                            result = "You Lose! " + computerSelection + " beats " + playerSelection;
+                        } else {
+                            result = "You win! " + playerSelection + " beats " + computerSelection;
+                        }
+                    } else if (playerSelection == "Scissors") {
+                        if (computerSelection == "Scissors") {
+                            result = "You Draw";
+                        } else if (computerSelection == "Rock") {
+                            result = "You Lose! " + computerSelection + " beats " + playerSelection;
+                        } else {
+                            result = "You win! " + playerSelection + " beats " + computerSelection;
+                        }
                     } else {
                         result = "An error occurred";
                     }
