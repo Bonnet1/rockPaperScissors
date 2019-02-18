@@ -6,7 +6,12 @@
     <body>
         <script type="text/javascript">
             function game() {
-                let round = 1
+                let round = 1;
+                let playerScore = 0;
+                let computerScore = 0;
+                while (round <=5) {
+
+                
                 let capitalize = (txt) =>  {
                     //let lower = str.toLowerCase();
                     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
@@ -18,24 +23,30 @@
                             result = "You Draw";
                         } else if (computerSelection == "Paper") {
                             result = "You Lose! " + computerSelection + " beats " + playerSelection;
+                            computerScore++;
                         } else {
                             result = "You win! " + playerSelection + " beats " + computerSelection;
+                            playerScore++;
                         }
                     } else if (playerSelection == "Paper") {
                         if (computerSelection == "Paper") {
                             result = "You Draw";
                         } else if (computerSelection == "Scissors") {
                             result = "You Lose! " + computerSelection + " beats " + playerSelection;
+                            computerScore++;
                         } else {
                             result = "You win! " + playerSelection + " beats " + computerSelection;
+                            playerScore++;
                         }
                     } else if (playerSelection == "Scissors") {
                         if (computerSelection == "Scissors") {
                             result = "You Draw";
                         } else if (computerSelection == "Rock") {
                             result = "You Lose! " + computerSelection + " beats " + playerSelection;
+                            computerScore++;
                         } else {
                             result = "You win! " + playerSelection + " beats " + computerSelection;
+                            playerScore++;
                         }
                     } else {
                         result = "An error occurred";
@@ -61,9 +72,15 @@
                 let playerSelection = capitalize(playerPlay)
 
                 //console.log(computerPlay)
-                console.log(computerSelection)
-                console.log(playerSelection)
+                console.log("Round: " + round)
+                console.log("Computer picked " + computerSelection)
+                console.log("Player picked " + playerSelection)
+
                 console.log(playRound(playerSelection, computerSelection))
+                console.log("Computer Score: " + computerScore)
+                console.log("Player Score: " + playerScore)
+                ++round;
+            }
             }
         </script>
     </body>
