@@ -2,86 +2,36 @@
 <html>
     <head>
         <Title>Rock Paper Scissors Game</Title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <script type="text/javascript">
-            function game() {
-                let round = 1;
-                let playerScore = 0;
-                let computerScore = 0;
-                while (round <=5) {
+        <div class="title">
+            <h1>Rock, Paper, or Scissors?</h1>
+        </div>
+        <div class="scores">
+            <div class ="round">
+                "Round: "
+                <span id="round">1</span>
+            </div>
+            <div class="player-score">
+                "Player Score: "
+                <span id="player-score">0</span>
+            </div>
+            <div class="comp-score">
+                    "Computer Score: "
+                    <span id="comp-score">0</span>
+            </div>
+        </div>
+        <div class="message">5 Rounds -- Pick your poison</div>
+        <div class="buttons">
+            <input class="btn" id ="Rock" type="image" src="https://www.worldatlas.com/r/w728-h425-c728x425/upload/32/32/be/shutterstock-449229811.jpg">
+            <input class="btn" id ="Paper" type="image" src="https://cdn.shopify.com/s/files/1/2553/8356/articles/united-states-constitution_1024x.jpg?v=1517875448">
+            <input class="btn" id ="Scissors" type="image" src="http://vignette2.wikia.nocookie.net/edwardscissorhands/images/d/df/Dedward.scissorhands/revision/latest?cb=20150927175723">
+        </div>
+        <div class="endgame">
+            <button style="display: none;">New Game</button>
+        </div>
 
-                
-                let capitalize = (txt) =>  {
-                    //let lower = str.toLowerCase();
-                    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-                }
-
-                function playRound(playerSelection, computerSelection) {
-                    if (playerSelection == "Rock") {
-                        if (computerSelection == "Rock") {
-                            result = "You Draw";
-                        } else if (computerSelection == "Paper") {
-                            result = "You Lose! " + computerSelection + " beats " + playerSelection;
-                            computerScore++;
-                        } else {
-                            result = "You win! " + playerSelection + " beats " + computerSelection;
-                            playerScore++;
-                        }
-                    } else if (playerSelection == "Paper") {
-                        if (computerSelection == "Paper") {
-                            result = "You Draw";
-                        } else if (computerSelection == "Scissors") {
-                            result = "You Lose! " + computerSelection + " beats " + playerSelection;
-                            computerScore++;
-                        } else {
-                            result = "You win! " + playerSelection + " beats " + computerSelection;
-                            playerScore++;
-                        }
-                    } else if (playerSelection == "Scissors") {
-                        if (computerSelection == "Scissors") {
-                            result = "You Draw";
-                        } else if (computerSelection == "Rock") {
-                            result = "You Lose! " + computerSelection + " beats " + playerSelection;
-                            computerScore++;
-                        } else {
-                            result = "You win! " + playerSelection + " beats " + computerSelection;
-                            playerScore++;
-                        }
-                    } else {
-                        result = "An error occurred";
-                    }
-                    return result;
-                }
-                
-                function computerPlay() {
-                    let randVar = Math.random();
-                    //console.log(randVar);
-                    if (randVar < 0.33) {
-                        computerPlay = "rock";
-                    } else if (randVar <0.67) {
-                        computerPlay = "paper";
-                    } else {
-                        computerPlay = "scissors";
-                    }
-                    return computerPlay;
-                }
-
-                let playerPlay = prompt("Please choose Rock, Paper, or Scissors", "")
-                let computerSelection = capitalize(computerPlay())
-                let playerSelection = capitalize(playerPlay)
-
-                //console.log(computerPlay)
-                console.log("Round: " + round)
-                console.log("Computer picked " + computerSelection)
-                console.log("Player picked " + playerSelection)
-
-                console.log(playRound(playerSelection, computerSelection))
-                console.log("Computer Score: " + computerScore)
-                console.log("Player Score: " + playerScore)
-                ++round;
-            }
-            }
-        </script>
+        <script src="script.js"></script>>
     </body>
 </html>
