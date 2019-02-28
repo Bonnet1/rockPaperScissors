@@ -1,55 +1,77 @@
-html {
-    font-size: 10px;
-    /*background: url(https://f4.bcbits.com/img/a3415088153_10.jpg) bottom center;*/
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: white;
-  }
-  
   body,html {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
+    height: 100%
+  }
+
+  .title {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-evenly;
+    align-items    : center;
+    height         : 5%;
+    margin         : 5%;
   }
   
   .buttons {
     display: flex;
     flex: 1;
-    min-height: 100vh;
+    min-height: 50vh;
     align-items: center;
     justify-content: center;
   }
   
   .btn {
-    border: .4rem solid black;
-    border-radius: .5rem;
-    margin: 1rem;
-    font-size: 1.5rem;
-    padding: 1rem .5rem;
-    transition: all .07s ease;
-    width: 10rem;
-    text-align: center;
-    color: black;
-    background: rgba(0,0,0,0.4);
-    text-shadow: 0 0 .5rem black;
+    align-self: center;
+    height: 100px;
+    transition-duration: 0.5s;
+  }
+
+  .btn:hover {
+      height: 125px;
+  }
+
+  .scores {
+    height         : 10%;
+    display        : flex;
+    justify-content: space-evenly;
+    align-items    : center;
+    text-transform : capitalize;
+  }
+
+  .message {
+    height         : 10%;
+    display        : flex;
+    justify-content: space-evenly;
+    align-items    : center;
+    text-transform : capitalize;
+  }
+
+  .buttons {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-evenly;
+    align-items    : center;
   }
   
-  .playing {
-    transform: scale(1.1);
-    border-color: #ffc600;
-    box-shadow: 0 0 1rem #ffc600;
+  .endgame {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    height         : 5%;
   }
   
-  kbd {
-    display: block;
-    font-size: 4rem;
+  button {
+    font-size  : 100%;
+    font-family: inherit;
+    border     : 2px solid black;
+    padding    : .5rem .5rem;
   }
   
-  .sound {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    color: #ffc600;
+  button:hover {
+    background: slategray;
+    border    : 1px solid whitesmoke;
+    color     : whitesmoke;
   }
-  
